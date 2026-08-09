@@ -200,3 +200,58 @@ Ready for Stage 5: Paper Trading (Testnet)
 - Review performance metrics
 
 Ready for Stage 6: Live Trading (after testnet success)
+
+---
+
+## AI Chat Integration ✅
+
+**Date:** 2026-08-09
+**Model:** Gemini 2.0 Flash (with fallback to other models)
+**Status:** Active
+
+### Features
+
+1. **AI Chat** - Natural language conversation with AITOS
+2. **Context Aware** - AI knows current system status, positions, market data
+3. **Persian Support** - Responds in Farsi
+4. **Safe** - Completely separate from trading logic
+
+### Commands
+
+- `/status` - System status
+- `/positions` - Open positions
+- `/balance` - Account balance
+- `/pnl` - Profit/Loss
+- `/pause` - Pause trading
+- `/resume` - Resume trading
+- `/kill_switch` - Emergency stop
+- **Any text** - AI Chat (Gemini)
+
+### How It Works
+
+```
+User sends message
+    ↓
+AITOS bot receives
+    ↓
+If command (/xxx) → Execute command
+If text → Send to Gemini AI → Get response → Send back
+    ↓
+User receives response
+```
+
+### Important Notes
+
+- AI Chat is COMPLETELY SEPARATE from trading logic
+- AI CANNOT influence trading decisions
+- AI only READS data, never WRITES
+- Trading logic remains unchanged
+
+### Configuration
+
+- `AITOS_GEMINI_API_KEY` in .env
+- Model: gemini-2.0-flash (with fallback)
+- Temperature: 0.7
+- Max tokens: 1024
+
+Ready for user testing!
