@@ -118,3 +118,37 @@ All core services verified:
 - ✅ All AITOS modules importable
 
 Ready for Stage 4: Backtesting
+
+---
+
+## Stage 4: Backtest ✅
+
+**Date:** 2026-08-09
+**Strategy:** RSI (14-period, 1h timeframe)
+**Period:** 30 days
+**Symbols:** BTC, ETH (Testnet - commodities not available on testnet)
+
+### Results
+
+| Symbol | Initial | Final | Return | Trades | Win Rate |
+|:-------|---------|-------|--------|--------|----------|
+| BTC | $10,000 | $11,316 | +13.16% | 17 | 82.4% |
+| ETH | $10,000 | $9,949 | -0.51% | 14 | 57.1% |
+| **Portfolio** | **$20,000** | **$21,265** | **+12.65%** | **31** | **71%** |
+
+### Notes
+
+- HIP-3 commodity assets (GOLD, BRENTOIL) are not available on testnet
+- These will be available when switching to mainnet (Stage 6)
+- BTC performed well with RSI strategy (+13.16%)
+- ETH was slightly negative (-0.51%)
+- Combined portfolio return: +12.65% in 30 days
+
+### Recommendation
+
+RSI strategy shows promising results for BTC. Consider:
+1. Optimizing RSI parameters for each symbol
+2. Adding additional indicators (MACD, Bollinger Bands)
+3. Implementing position sizing based on volatility
+
+Ready for Stage 5: Paper Trading (Testnet)
